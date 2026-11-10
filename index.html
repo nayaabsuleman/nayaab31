@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderly - Explore the World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <h2 class="logo">Wanderly<span>.</span></h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#explore">Explore</a>
+            <a href="#favourites">Favourites</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">DISCOVER YOUR NEXT ADVENTURE</p>
+
+            <h1>The world is waiting for <span>you.</span></h1>
+
+            <p>
+                Explore beautiful destinations, discover new places
+                and start planning your next journey with Wanderly.
+            </p>
+
+            <a href="#explore" class="button">Explore Destinations</a>
+        </div>
+    </section>
+
+    <!-- Explore Section -->
+    <section class="explore" id="explore">
+
+        <p class="tagline">FIND YOUR NEXT DESTINATION</p>
+
+        <h2>Where will you go next?</h2>
+
+        <p class="description">
+            Discover beautiful places around the world.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="search"
+                placeholder="Search destinations or countries..."
+                oninput="searchPlaces()"
+            >
+
+            <button onclick="searchPlaces()">Search</button>
+        </div>
+
+        <!-- Category Buttons -->
+        <div class="categories">
+            <button class="active" onclick="showCategory('All', this)">All Places</button>
+            <button onclick="showCategory('Beach', this)">Beaches</button>
+            <button onclick="showCategory('Mountain', this)">Mountains</button>
+            <button onclick="showCategory('City', this)">Cities</button>
+            <button onclick="showCategory('Nature', this)">Nature</button>
+        </div>
+
+        <!-- Surprise Me Button -->
+        <div class="surprise-section">
+            <p>Can't decide where to go?</p>
+
+            <button class="surprise-button" onclick="surpriseMe()">
+                 Surprise Me!✨
+            </button>
+
+            <p id="surpriseMessage"></p>
+        </div>
+
+        <!-- Destination Cards -->
+        <div class="destination-container" id="destinationContainer"></div>
+
+        <p id="noResults" hidden>No destinations found. Try another search!</p>
+
+    </section>
+
+    <!-- Favourites Section -->
+    <section class="favourites" id="favourites">
+
+        <p class="tagline">YOUR PERSONAL COLLECTION</p>
+
+        <h2>My Favourite Places ♡</h2>
+
+        <p>Keep your favourite travel destinations in one place.</p>
+
+        <ul id="favouriteList"></ul>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2 class="logo">Wanderly<span>.</span></h2>
+
+        <p>Your world. Your journey. Your story.</p>
+
+        <p>© 2026 Wanderly | Made with love for travellers.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

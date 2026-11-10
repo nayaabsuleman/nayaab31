@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f6ef;
+    color: #294638;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: #294638;
+}
+
+.logo span {
+    color: #c77b60;
+}
+
+
+/* Navigation Bar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background-color: #f8f6ef;
+    border-bottom: 1px solid #e6e1d7;
+}
+
+nav a {
+    text-decoration: none;
+    color: #294638;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #c77b60;
+}
+
+
+/* Home Section */
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 70px 7%;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(248, 246, 239, 0.98),
+            rgba(248, 246, 239, 0.75),
+            rgba(248, 246, 239, 0.15)
+        ),
+        url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tagline {
+    color: #b66d53;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #b66d53;
+    font-style: italic;
+}
+
+.hero-content > p:not(.tagline) {
+    color: #68756a;
+    max-width: 450px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #294638;
+    color: white;
+    padding: 13px 23px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #18382b;
+}
+
+
+/* Explore Section */
+
+.explore {
+    padding: 75px 7%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.explore h2,
+.favourites h2 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #7b827a;
+    margin-bottom: 30px;
+}
+
+
+/* Search Bar */
+
+.search-box {
+    display: flex;
+    max-width: 550px;
+    margin: 0 auto 25px;
+    border: 1px solid #deded5;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.search-box button {
+    background-color: #294638;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Categories */
+
+.categories {
+    margin-bottom: 35px;
+}
+
+.categories button {
+    background-color: #f8f6ef;
+    border: 1px solid #e6e1d7;
+    color: #294638;
+    padding: 9px 17px;
+    margin: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background-color: #294638;
+    color: white;
+}
+
+
+/* Destination Cards */
+
+.destination-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #eceae2;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(41, 70, 56, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+    color: #294638;
+}
+
+.card-content p {
+    color: #7b827a;
+    font-size: 13px;
+    margin: 7px 0;
+}
+
+.card-content button {
+    margin-top: 12px;
+    padding: 9px 12px;
+    background-color: #f8f6ef;
+    color: #294638;
+    border: 1px solid #deded5;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-content button:hover {
+    background-color: #294638;
+    color: white;
+}
+
+
+/* Favourites Section */
+
+.favourites {
+    padding: 75px 7%;
+    text-align: center;
+}
+
+.favourites > p:not(.tagline) {
+    color: #7b827a;
+    margin-top: 10px;
+}
+
+#favouriteList {
+    list-style: none;
+    max-width: 500px;
+    margin: 25px auto 0;
+}
+
+#favouriteList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+    padding: 12px 16px;
+    background-color: white;
+    border: 1px solid #e6e1d7;
+    border-radius: 5px;
+    text-align: left;
+}
+
+#favouriteList button {
+    background: transparent;
+    color: #b66d53;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 35px 7%;
+    background-color: #203c2f;
+    color: white;
+    text-align: center;
+}
+
+footer .logo {
+    color: white;
+}
+
+footer p {
+    color: #d5dfd6;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 50px 6%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .explore h2,
+    .favourites h2 {
+        font-size: 30px;
+    }
+
+    .destination-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .destination-container {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box button {
+        padding: 10px;
+    }
+
+    .categories button {
+        padding: 8px 12px;
+    }
+}
+/* Surprise Me Section */
+
+.surprise-section {
+    margin: 35px 0 40px;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #f8f6ef, #eee7d9);
+    border: 1px solid #e6e1d7;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(41, 70, 56, 0.08);
+}
+
+.surprise-section p {
+    color: #68756a;
+    margin-bottom: 14px;
+    font-size: 15px;
+}
+
+/* Surprise Me Button */
+
+.surprise-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #294638, #426b52);
+    color: #fffaf0;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(41, 70, 56, 0.25);
+    transition: all 0.35s ease;
+}
+
+/* Golden Sparkle */
+
+.surprise-button::before {
+    content: "✦";
+    font-size: 20px;
+    color: #f4c879;
+    transition: transform 0.4s ease;
+}
+
+/* Hover Effect */
+
+.surprise-button:hover {
+    background: linear-gradient(135deg, #b66d53, #cf9277);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(182, 109, 83, 0.3);
+}
+
+.surprise-button:hover::before {
+    transform: rotate(45deg) scale(1.3);
+}
+
+/* Click Effect */
+
+.surprise-button:active {
+    transform: scale(0.97);
+}
+
+/* Surprise Result Message */
+
+#surpriseMessage {
+    margin-top: 18px;
+    color: #294638;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+}
+
+/* Mobile Design */
+
+@media (max-width: 500px) {
+    .surprise-section {
+        padding: 25px 15px;
+    }
+
+    .surprise-button {
+        padding: 13px 24px;
+        font-size: 16px;
+    }
+}
